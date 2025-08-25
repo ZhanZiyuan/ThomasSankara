@@ -1,0 +1,120 @@
+# Project information
+site_name: 托马斯·桑卡拉：论布基纳法索的革命
+site_description: "Thomas Sankara Speaks: The Burkina Faso Revolution"
+site_author: zhanziyuan
+site_url: https://zhanziyuan.github.io/thomassankara/
+
+# Repository
+repo_name: ThomasSankara
+repo_url: https://github.com/ZhanZiyuan/ThomasSankara
+
+# Copyright
+copyright: Copyright &copy; 2025 Zhan Ziyuan
+
+# Configuration
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - header.autohide
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.annotate
+  font:
+    text: Roboto
+    code: Inconsolata
+  logo:
+    # icon: school
+  icon:
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.png # https://jdenticon.com/#icon-ThomasSankara
+  language: zh
+  include_search_page: false
+  search_index_only: true
+  custom_dir: overrides
+
+# Additional configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ZhanZiyuan/
+  # analytics:
+  #   provider: google
+  #   property:
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+# Page tree
+nav:
+  - Home: index.md
+  - Contents:
+      - 人民的敌人是谁: 01_人民的敌人是谁.md
+      - 我们国家的璀璨未来: 02_我们国家的璀璨未来.md
+      - 权力属于觉醒的人民: 03_权力属于觉醒的人民.md
+      - 建设摆脱社会不公和帝国主义支配的新社会: 04_建设摆脱社会不公和帝国主义支配的新社会.md
+      - 人民革命法院: 05_人民革命法院.md
+      - 非洲只有一种肤色——非洲统一的肤色: 06_非洲只有一种肤色——非洲统一的肤色.md
+      - 我们的斗争从古巴的榜样和支持中获取力量: 07_我们的斗争从古巴的榜样和支持中获取力量.md
+      - 坚持我们的身份，彰显我们的文化: 08_坚持我们的身份，彰显我们的文化.md
+      - 我们的白宫就在黑人的哈莱姆: 09_我们的白宫就在黑人的哈莱姆.md
+      - 我们终将争取到自由: 10_我们终将争取到自由.md
+      - 必须共同对抗帝国主义: 11_必须共同对抗帝国主义.md
+      - 敢于发明未来: 12_敢于发明未来.md
+      - 有人试图对我们发动一场不公正的战争: 13_有人试图对我们发动一场不公正的战争.md
+      - 关于非洲: 14_关于非洲.md
+      - 马里军队不再是战俘；他们是我们的兄弟: 15_马里军队不再是战俘；他们是我们的兄弟.md
+      - 帝国主义是森林和热带草原的纵火犯: 16_帝国主义是森林和热带草原的纵火犯.md
+      - 关于书籍与阅读: 17_关于书籍与阅读.md
+      - 法语使我们能够与其他在斗争中的人民进行交流: 18_法语使我们能够与其他在斗争中的人民进行交流.md
+      - CDR的职责：提高觉悟、采取行动、发动生产: 19_CDR的职责：提高觉悟、采取行动、发动生产.md
+      - 我们站在尼加拉瓜一边: 20_我们站在尼加拉瓜一边.md
+      - 不结盟运动在做什么？: 21_不结盟运动在做什么？.md
+      - 他的死亡必将启迪和增强我们: 22_他的死亡必将启迪和增强我们.md
+      - 我们必须让全世界都知道尼加拉瓜的斗争: 23_我们必须让全世界都知道尼加拉瓜的斗争.md
+      - 反对那些剥削压迫我们的人——在这里，以及在法国: 24_反对那些剥削压迫我们的人——在这里，以及在法国.md
+      - 革命的胜利离不开女性解放: 25_革命的胜利离不开女性解放.md
+      - 反对债务的统一战线: 26_反对债务的统一战线.md
+      - 我们可以依靠古巴: 27_我们可以依靠古巴.md
+      - 我们的革命需要的是一群深信不疑的人民，而不是被征服的人民: 28_我们的革命需要的是一群深信不疑的人民，而不是被征服的人民.md
+      - 八百万布基纳法索人民，八百万革命者: 29_八百万布基纳法索人民，八百万革命者.md
+      - 理想是杀不死的: 30_理想是杀不死的.md
