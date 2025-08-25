@@ -1,0 +1,52 @@
+name: Build and Release Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-lang-cjk fonts-noto-cjk zip
+
+      - name: Create output directories
+        run: |
+          mkdir -p output/pdf
+          mkdir -p output/docx
+
+      - name: Convert markdown to PDF and DOCX
+        run: |
+          for file in docs/*.md; do
+            name=$(basename "$file" .md)
+            pandoc "$file" -o "output/pdf/$name.pdf" --pdf-engine=xelatex -V mainfont="Noto Serif CJK SC"
+            pandoc "$file" -o "output/docx/$name.docx"
+          done
+
+      - name: Create zip archives
+        run: |
+          cd output
+          zip -r pdf_files.zip pdf
+          zip -r docx_files.zip docx
+          cd ..
+
+      - name: Generate release tag
+        id: tag
+        run: echo "tag=release-$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: Release ${{ steps.tag.outputs.tag }}
+          files: |
+            output/pdf_files.zip
+            output/docx_files.zip
