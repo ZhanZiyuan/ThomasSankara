@@ -48,5 +48,5 @@ jobs:
           tag_name: ${{ steps.tag.outputs.tag }}
           name: ${{ steps.tag.outputs.tag }}
           files: |
-            output/pdf-files.zip
-            output/docx-files.zip
+            output/pdf_files.zip
+            output/docx_files.zip
